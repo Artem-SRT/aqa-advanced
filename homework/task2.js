@@ -1,29 +1,21 @@
-// Переменная для номера дня недели (от 1 до 7)
-const dayNumber = 3;
+const averageGrade = 85;
 
-// Определение дня недели с помощью конструкции switch
-switch (dayNumber) {
-    case 1:
-        console.log("Понеділок");
+switch (true) {
+    case (averageGrade < 60):
+        console.log("Незадовільно");
         break;
-    case 2:
-        console.log("Вівторок");
+    case (averageGrade <= 70):
+        console.log("Задовільно");
         break;
-    case 3:
-        console.log("Середа");
+    case (averageGrade <= 80):
+        console.log("Добре");
         break;
-    case 4:
-        console.log("Четвер");
+    case (averageGrade <= 90):
+        console.log("Дуже добре");
         break;
-    case 5:
-        console.log("П'ятниця");
-        break;
-    case 6:
-        console.log("Субота");
-        break;
-    case 7:
-        console.log("Неділя");
+    case (averageGrade <= 100):
+        console.log("Відмінно");
         break;
     default:
-        console.log("Некоректний номер дня");
+        console.log("Некоректна оцінка");
 }
