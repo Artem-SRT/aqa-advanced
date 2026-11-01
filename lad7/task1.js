@@ -1,0 +1,10 @@
+import Book from './Book.js'; import EBook from './EBook.js';
+console.log("=== Завдання 1: Створення об'єктів та виклик printInfo ===");
+const book1 = new Book("Кобзар", "Тарас Шевченко", 1840); const book2 = new Book("Захар Беркут", "Іван Франко", 1883); const book3 = new Book("Тигролови", "Іван Багряний", 1944);
+book1.printInfo(); book2.printInfo(); book3.printInfo();
+const ebook1 = new EBook("Маруся Чурай", "Ліна Костенко", 1979, "EPUB"); ebook1.printInfo();
+console.log("\n=== Завдання 2: Геттери, сеттери, валідація та статичні методи ===");
+book1.title = "Нове видання Кобзаря"; console.log(Змінена через сеттер назва першої книги: "${book1.title}");
+const library = [book1, book2, book3, ebook1];
+const oldestBook = Book.findOldestBook(library); console.log("\nНайдавніша книга у масиві:"); if (oldestBook) oldestBook.printInfo();
+const convertedEBook = EBook.fromBook(book2, "PDF"); console.log("\nЕлектронна книга, створена з паперової за допомогою статичного методу:"); convertedEBook.printInfo();
